@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naive Quiz</title>
+</head>
+<body>
+    
+
+    
+    <!--       ...       -->
+
+
+
+
+    <script type="text/javascript">
+
+        /*
+            Usa le funzioni prompt e alert in Javascript per creare un quiz di 5 domande. Le domande devono avere una risposta aperta (es. qual è la capitale dell'Italia?) che l'utente deve fornire. Al termine delle 5 domande mostrare tramite alert il punteggio finale raggiunto dall'utente. Flusso di massima: 
+
+            // 1. prendere input utente (let risposta = ...)
+            // 2. Controllare se è != null
+            // 3. Se è diverso da null ->  usa il metodo .toLowerCase sull'input inserito dall'utente
+            // 4. Se la risposta è esatta incrementa di una unità un contatore intero precedentemente dichiarato come variabile globale
+            // 5. ripeti per tutte le domande del quiz
+            // 6. mostra il risultato finale tramite alert
+        */
+
+
+        let punti = 0  //definisco la variabile punteggio
+        
+        //domanda 1
+
+        let risposta = prompt("Qual è la capitale della Germania?")    //definisco la variabile contenente la risposta data basandomi sulla domanda
+
+        while(risposta===null){   //controllo se ha premuto cancel e nel caso richiedo la risposta
+            risposta=prompt("Inserire un necessariamente una risposta")
+        }
+        risposta=risposta.toLowerCase()    //trasformo la risposta in minuscolo per semplificarmi il lavoro
+
+        if(risposta==="berlino"){    //controllo se la risposta data coincide con quella esatta
+            punti=punti+1   //nel caso, incremento il punteggio di 1
+        }
+
+
+        //domanda 2
+        risposta = prompt("Dove si trova il Colosseo?")
+
+        while(risposta===null){
+            risposta=prompt("Inserire un necessariamente una risposta")
+        }
+        risposta=risposta.toLowerCase()
+
+        if(risposta==="roma"){
+            punti=punti+1
+        }
+
+
+        //domanda 3
+        risposta = prompt("Dove si trova il Big Ben?")
+        while(risposta===null){
+            risposta=prompt("Inserire un necessariamente una risposta")
+        }
+        risposta=risposta.toLowerCase()
+
+        if(risposta==="londra"){
+            punti=punti+1
+        }
+
+
+        //domanda 4
+        risposta = prompt("Dove si trova la Tour Eiffel?")
+        while(risposta===null){
+            risposta=prompt("Inserire un necessariamente una risposta")
+        }
+        risposta=risposta.toLowerCase()
+        if(risposta==="parigi"){
+            punti=punti+1
+        }
+
+
+        //domanda 5
+        risposta = prompt("Dove si trova la Sagrada Familia?")
+        while(risposta===null){
+            risposta=prompt("Inserire un necessariamente una risposta")
+        }
+        risposta=risposta.toLowerCase()
+        if(risposta==="barcellona"){
+            punti=punti+1
+        }
+
+        alert("Hai ottenuto un totale di "+punti+" punti")   //mostro infine il punteggio ottenuto in output
+
+    </script>
+</body>
+</html>

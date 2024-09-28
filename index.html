@@ -32,27 +32,27 @@
         
         //domanda 1
 
-        let risposta = prompt("Qual è la capitale della Germania?")    //definisco la variabile contenente la risposta data basandomi sulla domanda
+        let risposta = prompt("Chi ha scritto Romeo e Giulietta?")    //definisco la variabile contenente la risposta data basandomi sulla domanda
 
         while(risposta===null){   //controllo se ha premuto cancel e nel caso richiedo la risposta
-            risposta=prompt("Inserire un necessariamente una risposta")
+            risposta=prompt("Inserire un necessariamente una risposta. ")
         }
         risposta=risposta.toLowerCase()    //trasformo la risposta in minuscolo per semplificarmi il lavoro
 
-        if(risposta==="berlino"){    //controllo se la risposta data coincide con quella esatta
+        if(risposta==="shakespeare"){    //controllo se la risposta data coincide con quella esatta
             punti=punti+1   //nel caso, incremento il punteggio di 1
         }
 
 
         //domanda 2
-        risposta = prompt("Dove si trova il Colosseo?")
+        risposta = prompt("Chi ha scoperto l'America nel 1492?")
 
         while(risposta===null){
-            risposta=prompt("Inserire un necessariamente una risposta")
+            risposta=prompt("Inserire un necessariamente una risposta. ")
         }
         risposta=risposta.toLowerCase()
 
-        if(risposta==="roma"){
+        if(risposta==="cristoforo colombo"){
             punti=punti+1
         }
 
@@ -60,7 +60,7 @@
         //domanda 3
         risposta = prompt("Dove si trova il Big Ben?")
         while(risposta===null){
-            risposta=prompt("Inserire un necessariamente una risposta")
+            risposta=prompt("Inserire un necessariamente una risposta. ")
         }
         risposta=risposta.toLowerCase()
 
@@ -70,12 +70,12 @@
 
 
         //domanda 4
-        risposta = prompt("Dove si trova la Tour Eiffel?")
+        risposta = prompt("Qual è l'animale simbolo dell'Australia?")
         while(risposta===null){
-            risposta=prompt("Inserire un necessariamente una risposta")
+            risposta=prompt("Inserire un necessariamente una risposta. ")
         }
         risposta=risposta.toLowerCase()
-        if(risposta==="parigi"){
+        if(risposta==="canguro"){
             punti=punti+1
         }
 
@@ -83,14 +83,16 @@
         //domanda 5
         risposta = prompt("Dove si trova la Sagrada Familia?")
         while(risposta===null){
-            risposta=prompt("Inserire un necessariamente una risposta")
+            risposta=prompt("Inserire un necessariamente una risposta. ")
         }
         risposta=risposta.toLowerCase()
         if(risposta==="barcellona"){
             punti=punti+1
         }
-
-        alert("Hai ottenuto un totale di "+punti+" punti")   //mostro infine il punteggio ottenuto in output
+        
+        //alert finale
+        let percentuale = (punti*100)/5
+        alert("Hai ottenuto un totale di "+punti+" punti ("+percentuale+"% risposte corrette)")   //mostro infine il punteggio ottenuto in output
 
     </script>
 </body>

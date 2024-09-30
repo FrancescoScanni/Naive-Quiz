@@ -28,19 +28,37 @@
         */
 
 
-        let punti = 0  //definisco la variabile punteggio
+
         
 
+
+        function sanitise(risposta){
+            risposta=risposta.toLowerCase().trim()   
+            return risposta;
+        }
+
+        function percent(percentuale,punti){
+            percentuale=(punti*100)/5
+            return percentuale;
+        }
+
+
+
+
+
+
+
+        let punti = 0  //definisco la variabile punteggio
+        
         //domanda 1
         let risposta = prompt("Chi ha scritto Romeo e Giulietta?")    //definisco la variabile contenente la risposta data basandomi sulla domanda
 
         while(risposta===null || !isNaN(risposta)){   //controllo se ha premuto cancel e nel caso richiedo la risposta
             risposta=prompt("Inserire la risposta (NO valori numerici). ")
         }
-  
-
-        if(risposta.toLowerCase().trim()==="shakespeare"){    //controllo se la risposta data coincide con quella esatta
-            punti=punti+1   //nel caso, incremento il punteggio di 1
+        risposta=sanitise(risposta)
+        if(risposta==="shakespeare"){
+            punti=punti+1
         }
 
 
@@ -50,20 +68,20 @@
         while(risposta===null || !isNaN(risposta)){
             risposta=prompt("Inserire la risposta (NO valori numerici). ")
         }
-    
-
-        if(risposta.toLowerCase().trim()==="cristoforo colombo"){     //il trim occorre per eliminare gli spazi superflui prima/dopo la stringa effettiva
+        risposta=sanitise(risposta)
+        if(risposta==="cristoforo colombo"){
             punti=punti+1
         }
 
 
         //domanda 3
         risposta = prompt("Dove si trova il Big Ben?")
+
         while(risposta===null || !isNaN(risposta)){
             risposta=prompt("Inserire la risposta (NO valori numerici). ")
         }
-
-        if(risposta.toLowerCase().trim()==="londra"){   //trasformo la risposta in minuscolo per semplificarmi il lavoro
+        risposta=sanitise(risposta)
+        if(risposta==="londra"){
             punti=punti+1
         }
 
@@ -73,25 +91,25 @@
         while(risposta===null || !isNaN(risposta)){
             risposta=prompt("Inserire la risposta (NO valori numerici). ")
         }
-    
-        if(risposta.toLowerCase().trim()==="canguro"){
+        risposta=sanitise(risposta)
+        if(risposta==="canguro"){
             punti=punti+1
         }
-
 
         //domanda 5
         risposta = prompt("Dove si trova la Sagrada Familia?")
         while(risposta===null || !isNaN(risposta)){
             risposta=prompt("Inserire la risposta (NO valori numerici). ")
         }
-
-        if(risposta.toLowerCase().trim()==="barcellona"){
+        risposta=sanitise(risposta)
+        if(risposta==="barcellona"){
             punti=punti+1
         }
         
         //alert finale
-        let percentuale = (punti*100)/5
-        alert("Hai ottenuto un totale di "+punti+" punti ("+percentuale+"% risposte corrette)")   //mostro infine il punteggio ottenuto 
+        let percentuale = 0
+        percentuale=percent(percentuale,punti)
+        console.log("Hai ottenuto un totale di "+punti+" punti ("+percentuale+"% risposte corrette)")   //mostro infine il punteggio ottenuto 
 
     </script>
 </body>

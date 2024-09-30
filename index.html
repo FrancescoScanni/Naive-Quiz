@@ -37,10 +37,9 @@
         while(risposta===null || !isNaN(risposta)){   //controllo se ha premuto cancel e nel caso richiedo la risposta
             risposta=prompt("Inserire la risposta (NO valori numerici). ")
         }
+  
 
-        risposta=risposta.toLowerCase()    //trasformo la risposta in minuscolo per semplificarmi il lavoro
-
-        if(risposta==="shakespeare"){    //controllo se la risposta data coincide con quella esatta
+        if(risposta.toLowerCase().trim()==="shakespeare"){    //controllo se la risposta data coincide con quella esatta
             punti=punti+1   //nel caso, incremento il punteggio di 1
         }
 
@@ -51,9 +50,9 @@
         while(risposta===null || !isNaN(risposta)){
             risposta=prompt("Inserire la risposta (NO valori numerici). ")
         }
-        risposta=risposta.toLowerCase()
+    
 
-        if(risposta==="cristoforo colombo"){
+        if(risposta.toLowerCase().trim()==="cristoforo colombo"){     //il trim occorre per eliminare gli spazi superflui prima/dopo la stringa effettiva
             punti=punti+1
         }
 
@@ -63,9 +62,8 @@
         while(risposta===null || !isNaN(risposta)){
             risposta=prompt("Inserire la risposta (NO valori numerici). ")
         }
-        risposta=risposta.toLowerCase()
 
-        if(risposta==="londra"){
+        if(risposta.toLowerCase().trim()==="londra"){   //trasformo la risposta in minuscolo per semplificarmi il lavoro
             punti=punti+1
         }
 
@@ -75,8 +73,8 @@
         while(risposta===null || !isNaN(risposta)){
             risposta=prompt("Inserire la risposta (NO valori numerici). ")
         }
-        risposta=risposta.toLowerCase()
-        if(risposta==="canguro"){
+    
+        if(risposta.toLowerCase().trim()==="canguro"){
             punti=punti+1
         }
 
@@ -86,8 +84,8 @@
         while(risposta===null || !isNaN(risposta)){
             risposta=prompt("Inserire la risposta (NO valori numerici). ")
         }
-        risposta=risposta.toLowerCase()
-        if(risposta==="barcellona"){
+
+        if(risposta.toLowerCase().trim()==="barcellona"){
             punti=punti+1
         }
         
